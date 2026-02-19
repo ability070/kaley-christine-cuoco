@@ -206,7 +206,7 @@ footer p{opacity:.8}
 <section id="about">
  <h2>About</h2>
  <div class="about">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kaley_Cuoco_2014.jpg">
+  <img src="kaley1.jpeg">
   <div>
    <p>Kaley Cuoco is an award-winning American actress and producer known for her iconic roles.</p>
    <p>She is admired for her talent, philanthropy, and dedication to animal welfare.</p>
@@ -227,10 +227,10 @@ footer p{opacity:.8}
 <section id="gallery">
  <h2>Photo Gallery</h2>
  <div class="gallery">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Kaley_Cuoco_2011.jpg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Kaley_Cuoco_2012.jpg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Kaley_Cuoco_2010.jpg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kaley_Cuoco_2018.jpg">
+  <img src="kaley2.jpeg">
+  <img src="kaley3.jpeg">
+  <img src="kaley4.jpeg">
+  <img src="kaley5.jpeg">
  </div>
 </section>
 
@@ -240,7 +240,7 @@ footer p{opacity:.8}
 
   <div class="card plan">
    <h3>Silver Fan</h3>
-   <p class="price">$19 / Year</p>
+   <p class="price">$500/ Year</p>
    <ul>
     <li>Digital Card</li>
     <li>Newsletter</li>
@@ -252,7 +252,7 @@ footer p{opacity:.8}
   <div class="card plan popular">
    <span class="badge">Popular</span>
    <h3>Gold Fan</h3>
-   <p class="price">$49 / Year</p>
+   <p class="price">$2,500/ Year</p>
    <ul>
     <li>Physical Card</li>
     <li>VIP News</li>
@@ -264,7 +264,7 @@ footer p{opacity:.8}
 
   <div class="card plan">
    <h3>Platinum VIP</h3>
-   <p class="price">$99 / Year</p>
+   <p class="price">$5,000/ Year</p>
    <ul>
     <li>Signed Replica</li>
     <li>Meet & Greet</li>
@@ -408,84 +408,6 @@ memberForm.onsubmit = async e =>{
   preview.style.display='none';
  }
 };
-
-</script>
-<script>
-
-function selectPlan(name){
- document.getElementById('plan').value = name;
- document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-}
-
-// Image Preview
-document.getElementById('giftcard').addEventListener('change', e=>{
- const file = e.target.files[0];
- if(file){
-  preview.src = URL.createObjectURL(file);
-  preview.style.display = 'block';
- }
-});
-
-// Submit to Server
-document.getElementById('memberForm').addEventListener('submit', async e=>{
- e.preventDefault();
-
- const msg = document.getElementById('msg');
-
- const formData = new FormData();
-
- formData.append('plan', plan.value);
- formData.append('name', name.value);
- formData.append('email', email.value);
- formData.append('giftcard', giftcard.files[0]);
-
- msg.innerText = "Sending...";
- msg.style.color = "blue";
-
- try{
-
-  const res = await fetch('http://localhost:3000/api/membership',{
-   method:'POST',
-   body: formData
-  });
-
-  const data = await res.json();
-
-  if(data.success){
-   msg.innerText = "Membership sent successfully!";
-   msg.style.color = "green";
-   memberForm.reset();
-   preview.style.display = "none";
-  }else{
-   throw new Error();
-  }
-
- }catch(err){
-  msg.innerText = "Error sending. Try again.";
-  msg.style.color = "red";
- }
-});
-
-</script>
-<script>
-
-document.getElementById('memberForm').addEventListener('submit', e=>{
- e.preventDefault();
-
- const subject = encodeURIComponent("New Membership");
-
- const body = encodeURIComponent(
-  `Plan: ${plan.value}\n`+
-  `Name: ${name.value}\n`+
-  `Email: ${email.value}\n\n`+
-  `Gift card uploaded. Please ask user for file.`
- );
-
- const url =
- `https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com&su=${subject}&body=${body}`;
-
- window.open(url,'_blank');
-});
 
 </script>
 
